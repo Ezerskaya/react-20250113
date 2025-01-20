@@ -7,7 +7,7 @@ const reactRoot = createRoot(rootElement)
 reactRoot.render(
   <ul>
     {restaurants.map((restaurant, index) => (
-        <div>
+        <div key={index}>
           <h2>{restaurant.name}</h2>
           <h3>Меню</h3>
           <ul>
