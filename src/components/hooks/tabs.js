@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
-export const useTabs = () => {
-  const [activeTab, setActiveTab] = useState(0);
+export const useTabs = (initialList) => {
+  const initialActiveTab = initialList?.length > 0 ? initialList[0].id : '';
 
-  const onTabChange = (newIndex) => {
-    setActiveTab(newIndex);
+  const [activeTab, setActiveTab] = useState(initialActiveTab);
+
+  const onTabChange = (idItem) => {
+    setActiveTab(idItem);
   }
 
   return {
