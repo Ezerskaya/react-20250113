@@ -12,15 +12,15 @@ const cardStyle = {
 export const Restaurant = ({ restaurant }) => {
   const { id, name } = restaurant
 
-  if (!restaurant.reviews.length) {
-    return 'There are no reviews'
-  }
+  const checkEmptyReviews = restaurant.reviews.length !== 0;
 
   return (
     <div key={id} style={cardStyle}>
       <h2>{name}</h2>
       <RestaurantMenu restaurant={restaurant}/>
-      <RestaurantReviews restaurant={restaurant}/>
+      {checkEmptyReviews && (
+        <RestaurantReviews restaurant={restaurant}/>
+      )}
     </div>
   )
 }

@@ -1,10 +1,10 @@
-import { Restaurants } from '../restaurants/Restaurants.jsx'
+import { RestaurantsPage } from '../restaurants-page/RestaurantsPage.jsx'
 import { Layout } from '../layout/Layout.jsx'
 
 export const App = () => {
   return (
     <Layout>
-      <Restaurants/>
+      <RestaurantsPage/>
     </Layout>
   )
 }

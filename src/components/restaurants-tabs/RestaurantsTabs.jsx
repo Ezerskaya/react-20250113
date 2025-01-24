@@ -1,19 +1,16 @@
 const tabStyle = {
+  marginBottom: '1rem',
   marginRight: '0.5rem',
   cursor: 'pointer',
   borderRadius: '10rem',
   backgroundColor: 'white',
 }
 
-export const RestaurantsTabs = ({ listRestaurants, onTabChange }) => {
+export const RestaurantsTabs = ({ isActive, onClick, title }) => {
 
   return (
-    <div style={{ marginBottom: '1rem' }}>
-      {listRestaurants.map((item) => (
-        <button key={item.id} style={tabStyle} onClick={() => onTabChange(item.id)}>
-          {item.name}
-        </button>
-      ))}
-    </div>
+    <button style={tabStyle} onClick={onClick} disabled={isActive}>
+      {title}
+    </button>
   )
 }
