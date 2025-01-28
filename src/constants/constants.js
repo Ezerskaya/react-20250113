@@ -1,0 +1,16 @@
+export const SET_NAME_ACTION = 'SET_NAME_ACTION'
+
+export const SET_TEXT_ACTION = 'SET_TEXT_ACTION'
+
+export const SET_RATING_DECREMENT_ACTION = 'SET_RATING_DECREMENT_ACTION'
+
+export const SET_RATING_INCREMENT_ACTION = 'SET_RATING_INCREMENT_ACTION'
+
+export const RESET_ACTION = 'RESET_ACTION'
+
+export const INITIAL_VALUE = {
+  name: '',
+  text: '',
+  rating: 0,
+}
+

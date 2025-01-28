@@ -1,5 +1,6 @@
 import { RestaurantReviews } from '../restaurant-reviews/RestaurantReviews.jsx'
 import { RestaurantMenu } from '../restaurant-menu/RestaurantMenu.jsx'
+import { ReviewForm } from '../review-form/ReviewForm.jsx'
 
 const cardStyle = {
   display: 'block',
@@ -17,6 +18,7 @@ export const Restaurant = ({ restaurant }) => {
       <h2>{name}</h2>
       <RestaurantMenu restaurant={restaurant}/>
       <RestaurantReviews restaurant={restaurant}/>
+      <ReviewForm/>
     </div>
   )
 }
