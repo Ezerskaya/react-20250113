@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    border: 0.2rem solid var(--color-primary);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0.6;
+    box-sizing: border-box;
+}
+
+.button:disabled {
+    opacity: 0.8;
+    color: black;
+    background-color: var(--color-primary-light);
+}
+
+.countNumber {
+    padding: 0 0.5rem;
+    font-family: var(--font-family-bebas), sans-serif;
+    font-size: 2rem;
+}

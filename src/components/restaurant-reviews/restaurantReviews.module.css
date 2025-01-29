@@ -1,0 +1,12 @@
+.wrapper {
+    margin-bottom: var(--margin-bottom-section);
+    padding: 1rem 0;
+    border-top: 0.5rem dashed var(--color-dark);
+    border-bottom: 0.5rem dashed var(--color-dark);
+}
+
+.title {
+    margin-bottom: var(--margin-bottom-title);
+    font-family: var(--font-family-bebas), sans-serif;
+    font-size: var(--font-size-title-small);
+}

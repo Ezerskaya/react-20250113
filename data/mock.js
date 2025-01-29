@@ -21,6 +21,18 @@ export const restaurants = [
         price: 8,
         ingredients: ['chicken', 'bread'],
       },
+      {
+        id: 'bd129641-c0eb-432b-84b6-8b81d2930359',
+        name: 'VADA PAU',
+        price: 8,
+        ingredients: ['potato', 'chutneys'],
+      },
+      {
+        id: 'bd129641-c0eb-432b-84b6-8b81d2930360',
+        name: 'CHOLE PURI HALWA',
+        price: 8,
+        ingredients: ['chickpeas', 'halwa', 'pickles'],
+      },
     ],
     reviews: [
       {

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blinker&display=swap');
+
+:root {
+    --color-dark: #000000;
+    --color-primary-light: #ffffff;
+    --color-primary: #e3230d;
+    --color-bg: #e3230d;
+    --color-btn-active: #b9cee6;
+    --color-btn-hover: #b9cee6;
+
+    --font-size-btn-big: 3rem;
+    --font-size-btn-middle: 1.5rem;
+    --font-size-btn-small: 1.1rem;
+    --font-size-title-big: 5rem;
+    --font-size-title-middle: 2.5rem;
+    --font-size-title-small: 2rem;
+    --font-family-bebas: 'Bebas Neue', serif;
+    --font-size-text-middle: 2rem;
+    --font-size-text-small: 1.2rem;
+
+    --margin-bottom-section: 3rem;
+    --margin-bottom-title: 2rem
+}
+
+* {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "monospace", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.blinker-regular {
+    font-family: "Blinker", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Bebas Neue", serif;
+    line-height: 1.1;
+    text-wrap: balance;
+}
+
+button, label {
+    font-family: "Bebas Neue", serif;
+    line-height: 1.1;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}

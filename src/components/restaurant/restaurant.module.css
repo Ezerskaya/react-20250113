@@ -1,0 +1,7 @@
+.card {
+    margin: 2rem 0;
+}
+.title {
+    margin-bottom: var(--margin-bottom-title);
+    font-size: var(--font-size-title-small);
+}

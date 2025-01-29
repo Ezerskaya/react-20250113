@@ -27,12 +27,10 @@ export const reducer = (state, { type, payload }) => {
     case SET_RATING_DECREMENT_ACTION:
       return {
         ...state,
-        rating: Math.max(state.rating - 1, 5),
+        rating: Math.max(state.rating - 1, 1),
       }
     case RESET_ACTION:
-      return {
-        ...INITIAL_VALUE
-      }
+      return INITIAL_VALUE
     default:
       return state
   }

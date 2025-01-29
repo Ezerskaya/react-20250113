@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    font-family: var(--font-family-bebas), sans-serif;
+    font-size: var(--font-size-title-middle);
+    color: var(--color-primary);
+}
+
+.labelText {
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-text-middle);
+}
+
+.inputStyle {
+    max-width: 20rem;
+    min-width: 15rem;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem;
+    font-size: var(--font-size-text-small);
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-btn-small);
+    background-color: var(--color-primary-light);
+    border: 0.2rem solid var(--color-primary);
+    text-align: center;
+    color: var(--color-primary);
+}
