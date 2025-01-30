@@ -17,10 +17,8 @@ export const ProgressBar = () => {
 
     }
     window.addEventListener('scroll', handleScroll)
-    console.log('mount')
 
     return () => {
-      console.log('unmount')
       window.removeEventListener('scroll', handleScroll)
     }
 

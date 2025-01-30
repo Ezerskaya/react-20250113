@@ -20,7 +20,7 @@ export const ReviewForm = () => {
         <input type="text" value={form.text} className={styles.inputStyle}
                onChange={(event) => setText(event.target.value)}/>
       </div>
-      <Button type={'submit'} onClick={resetForm} extraStyles={styles.button}>clear</Button>
+      <Button type={'submit'} onClick={resetForm}>clear</Button>
     </div>
   )
 }

@@ -17,4 +17,32 @@
     background-color: var(--color-btn-active);
 }
 
+.buttonWithoutBg {
+    display: inline-block;
+    width: fit-content;
+    height: 2rem;
+    padding: 0.2rem;
+    color: var(--color-primary);
+    font-size: var(--font-size-btn-big);
+    background-color: var(--color-primary-light);
+    border: 0.2rem solid var(--color-primary);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0.5;
+    box-sizing: border-box;
+}
+
+.buttonWithoutBg_SmallText {
+    font-size: var(--font-size-btn-small);
+}
+
+.buttonWithoutBg:disabled {
+    opacity: 0.8;
+    color: black;
+    background-color: var(--color-primary-light);
+}
+
+
+
+
 

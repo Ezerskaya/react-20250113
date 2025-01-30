@@ -24,12 +24,3 @@
     padding: 0.2rem;
     font-size: var(--font-size-text-small);
 }
-
-.button {
-    padding: 0.5rem 1rem;
-    font-size: var(--font-size-btn-small);
-    background-color: var(--color-primary-light);
-    border: 0.2rem solid var(--color-primary);
-    text-align: center;
-    color: var(--color-primary);
-}
