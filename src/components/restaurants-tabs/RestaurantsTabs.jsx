@@ -1,16 +1,13 @@
-const tabStyle = {
-  marginBottom: '1rem',
-  marginRight: '0.5rem',
-  cursor: 'pointer',
-  borderRadius: '10rem',
-  backgroundColor: 'white',
-}
+import { Button } from '../button/Button.jsx'
+import styles from './restaurantsTabs.module.css'
 
-export const RestaurantsTabs = ({ isActive, onClick, title }) => {
-
+export const RestaurantsTabs = ({ onClick, title, isActive }) => {
   return (
-    <button style={tabStyle} onClick={onClick} disabled={isActive}>
-      {title}
-    </button>
+    <Button
+      onClick={onClick}
+      disabled={isActive}
+      viewVariant={'contained'}
+      className={styles.tab}
+      title={title}/>
   )
 }

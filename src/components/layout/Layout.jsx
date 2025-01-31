@@ -1,11 +1,16 @@
-import { Header } from './Header.jsx'
-import { Footer } from './Footer.jsx'
+import { Header } from './header/Header.jsx'
+import { Footer } from './footer/Footer.jsx'
+import { ProgressBar } from '../progress-bar/ProgressBar.jsx'
+import { Container } from './container/Container.jsx'
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <>
+      <ProgressBar/>
       <Header/>
-      {children}
+      <Container size={'xl'}>
+        {children}
+      </Container>
       <Footer/>
     </>
   )

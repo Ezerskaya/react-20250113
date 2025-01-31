@@ -1,0 +1,9 @@
+.wrapper {
+    display: grid;
+    gap: 16px; /* Отступ между карточками */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.title {
+    margin-bottom: var(--margin-bottom-title);
+    font-size: var(--font-size-title-middle);
+}

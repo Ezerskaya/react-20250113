@@ -16,7 +16,7 @@ export const RestaurantsPage = () => {
   }
 
   return (
-    <div>
+    <>
       {restaurants?.map((item) => (
         <RestaurantsTabs
           key={item.id}
@@ -25,11 +25,11 @@ export const RestaurantsPage = () => {
           isActive={activeRestaurantTab === item.id}
         />
       ))}
-      <div style={{ display: 'flex', marginBottom: '2rem' }}>
+      <div>
         {activeRestaurant && (
           <Restaurant key={activeRestaurant.id} restaurant={activeRestaurant}/>
         )}
       </div>
-    </div>
+    </>
   )
 }

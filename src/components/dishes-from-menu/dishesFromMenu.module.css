@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--margin-bottom-section);
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.imageDish {
+    width: 100%;
+    max-width: 10rem;
+}
+
+.nameDish {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 0.5rem 0;
+    font-size: var(--font-size-text-small);
+    text-transform: lowercase;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}

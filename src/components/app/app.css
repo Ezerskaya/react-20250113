@@ -1,0 +1,21 @@
+:root {
+    --color-dark: #000000;
+    --color-primary-light: #ffffff;
+    --color-primary: #e3230d;
+    --color-bg: #e3230d;
+    --color-btn-active: #b9cee6;
+    --color-btn-hover: #b9cee6;
+
+    --font-size-btn-big: 3rem;
+    --font-size-btn-middle: 1.5rem;
+    --font-size-btn-small: 1.1rem;
+    --font-size-title-big: 5rem;
+    --font-size-title-middle: 2.5rem;
+    --font-size-title-small: 2rem;
+    --font-family-bebas: 'Bebas Neue', serif;
+    --font-size-text-middle: 2rem;
+    --font-size-text-small: 1.2rem;
+
+    --margin-bottom-section: 3rem;
+    --margin-bottom-title: 2rem
+}
