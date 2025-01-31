@@ -1,18 +1,23 @@
 import styles from './button.module.css'
 import classNames from 'classnames'
 
-const variantClasses = {
-  primary: styles.button,
-  withoutBg: styles.buttonWithoutBg,
-}
-
-export const Button = ({ children, disabled, onClick, viewVariant = 'primary', extraStyles }) => {
-
-  const variantStyle = variantClasses[viewVariant] || styles.button
+export const Button = ({
+  title,
+  disabled,
+  onClick,
+  viewVariant = "contained",
+  className
+}) => {
 
   return (
-    <button disabled={disabled} onClick={onClick} className={classNames(variantStyle, extraStyles)}>
-      {children}
+    <button
+      disabled={disabled}
+      onClick={onClick}
+      className={classNames(className, {
+        [styles.contained]: viewVariant === 'contained',
+        [styles.border]: viewVariant === 'border',
+      })}>
+      {title}
     </button>
   )
 }

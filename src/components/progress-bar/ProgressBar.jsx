@@ -22,7 +22,7 @@ export const ProgressBar = () => {
       window.removeEventListener('scroll', handleScroll)
     }
 
-  }, [progress])
+  }, [])
 
   return (
     <div className={classNames(styles.progressBar)} style={{ width: `${progress}%` }}/>
