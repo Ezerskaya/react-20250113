@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: var(--color-dark)
+}
+
+.button {
+    margin: 0 1rem;
+}
