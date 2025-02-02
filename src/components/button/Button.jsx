@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 export const Button = ({
   title,
+  icon,
   disabled,
   onClick,
   viewVariant = "contained",
@@ -16,7 +17,9 @@ export const Button = ({
       className={classNames(className, {
         [styles.contained]: viewVariant === 'contained',
         [styles.border]: viewVariant === 'border',
+        [styles.icon]: viewVariant === 'icon',
       })}>
+      {icon}
       {title}
     </button>
   )

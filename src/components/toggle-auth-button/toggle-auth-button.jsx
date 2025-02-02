@@ -8,7 +8,7 @@ export const ToggleAuthButton = () => {
 
   return (
     <div className={styles.wrapper}>
-      <span className={styles.title}>{auth ? `Welcome! ${guestName}` : 'Are you hungry?'}</span>
+      <span>{auth ? `Welcome! ${guestName}` : 'Are you hungry?'}</span>
       <Button onClick={toggleAuth} title={auth ? 'Log out' : 'Log in'} className={styles.button}/>
     </div>
   )
