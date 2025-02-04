@@ -14,8 +14,6 @@ export const ThemeContextProvider = ({ children }) => {
     })
   }, [])
 
-  console.log(theme)
-
   return (
     <ThemeContext value={{ theme, toggleTheme }}>
       {children}
