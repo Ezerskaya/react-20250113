@@ -13,6 +13,12 @@
     max-width: 10rem;
 }
 
+.imageDarkTheme {
+    width: 100%;
+    max-width: 10rem;
+    filter: invert(1);
+}
+
 .nameDish {
     display: -webkit-box;
     -webkit-line-clamp: 2;
