@@ -7,11 +7,14 @@ export const RestaurantReviews = ({ reviewsId }) => {
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.title}>Reviews</h3>
-      {checkEmptyReviews ?
-        (reviewsId.map((review) => (
-          <RestaurantReviewContainer key={review.id} id={review}/>
-        ))) : (<b>No reviews yet!</b>)
-      }
+      <ul>
+        {checkEmptyReviews ?
+          (reviewsId.map((reviewId) => (
+            <RestaurantReviewContainer key={reviewId.id} id={reviewId}/>
+
+          ))) : (<b>No reviews yet!</b>)
+        }
+      </ul>
     </div>
   )
 }

@@ -21,7 +21,7 @@ export const RestaurantsPage = () => {
       {restaurantsIds.map((id) => (
         <RestaurantTabContainer
           key={id}
-          title={id}
+          id={id}
           onClick={() => handleSetActiveRestaurantId(id)}
           isActive={activeRestaurantTab === id}
         />
