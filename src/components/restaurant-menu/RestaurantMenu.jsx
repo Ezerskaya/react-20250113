@@ -1,13 +1,14 @@
-import { DishesFromMenu } from '../dishes-from-menu/DishesFromMenu.jsx'
 import styles from './restaurantMenu.module.css'
-export const RestaurantMenu = ({ restaurant }) => {
+import { DishesFromMenuContainer } from '../dishes-from-menu/DishesFromMenuContainer.jsx'
+
+export const RestaurantMenu = ({ menu }) => {
 
   return (
     <div>
       <h3 className={styles.title}>Menu</h3>
       <ul className={styles.wrapper}>
-        {restaurant.menu.map((item) => (
-          <DishesFromMenu key={item.id} item={item}/>
+        {menu.map((dishId) => (
+          <DishesFromMenuContainer key={dishId.id} id={dishId}/>
         ))}
       </ul>
     </div>

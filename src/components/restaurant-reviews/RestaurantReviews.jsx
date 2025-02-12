@@ -1,22 +1,19 @@
-import styles from "./restaurantReviews.module.css"
-export const RestaurantReviews = ({ restaurant }) => {
+import styles from './restaurantReviews.module.css'
+import { RestaurantReviewContainer } from '../restaurant-review/RestaurantReviewContainer.jsx'
 
-  const checkEmptyReviews = restaurant.reviews.length !== 0
+export const RestaurantReviews = ({ reviewsId }) => {
+  const checkEmptyReviews = reviewsId.length !== 0
 
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.title}>Reviews</h3>
-      {checkEmptyReviews ? (<ul>
-        {restaurant.reviews.map((item) => (
-          <li key={item.id}> - {item.text}</li>
-        ))}
-      </ul>) : (
-          <p>No reviews</p>
-      )}
       <ul>
-        {restaurant.reviews.map((item) => (
-          <li key={item.id}>- {item.text}</li>
-        ))}
+        {checkEmptyReviews ?
+          (reviewsId.map((reviewId) => (
+            <RestaurantReviewContainer key={reviewId.id} id={reviewId}/>
+
+          ))) : (<b>No reviews yet!</b>)
+        }
       </ul>
     </div>
   )
