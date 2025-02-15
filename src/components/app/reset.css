@@ -21,6 +21,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background-color: white;
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 40px 40px;
 }
 
 img {

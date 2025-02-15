@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { DishesFromMenu } from './DishesFromMenu'
-import { selectDishById } from '../redux/entities/dishes/slice.js'
+import { selectDishById } from '../../redux/entities/dishes/slice.js'
+import { NavLink } from 'react-router'
 
 export const DishesFromMenuContainer = ({ id }) => {
   const dish = useSelector((state) => selectDishById(state, id))
@@ -8,6 +9,16 @@ export const DishesFromMenuContainer = ({ id }) => {
   const { name, ingredients, price } = dish || {}
 
   return (
-    <DishesFromMenu name={name} ingredients={ingredients} price={price}/>
+    <NavLink to={`/dish/${id}`}
+             style={({ isActive }) => {
+               return {
+                 textDecoration: 'none',
+                 fontWeight: isActive ? 'bold' : '',
+               }
+             }}
+    >
+      <DishesFromMenu name={name} ingredients={ingredients} price={price} id={id}/>
+    </NavLink>
+
   )
 }

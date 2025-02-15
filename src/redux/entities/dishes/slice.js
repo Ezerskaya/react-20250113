@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { normalizedDishes } from '../../../../../data/normalized-mock.js'
+import { normalizedDishes } from '../../../../data/normalized-mock.js'
 
 const initialState = {
   ids: normalizedDishes.map(({ id }) => id),

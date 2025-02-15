@@ -1,0 +1,36 @@
+.tab {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem 0;
+    font-size: var(--font-size-btn-big);
+    font-family: var(--font-family-bebas);
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--color-btn-active);
+    }
+}
+
+.middleSizeTab {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem 0;
+    font-size: var(--font-size-btn-middle);
+    font-family: var(--font-family-bebas);
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    &:hover {
+        background-color: var(--color-btn-active);
+    }
+}
+
+.isActive {
+    color: black;
+    background-color: var(--color-btn-active);
+}

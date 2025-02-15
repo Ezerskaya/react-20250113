@@ -5,10 +5,12 @@ import { Footer } from './footer/Footer.jsx'
 import { ProgressBar } from '../progress-bar/ProgressBar.jsx'
 import { Container } from './container/Container.jsx'
 import { ThemeContext } from '../theme-context/index.js'
+import { CartContainer } from '../cart/cart-container.jsx'
+import { Outlet } from 'react-router'
 
 import styles from './layout.module.css'
 
-export const Layout = ({ children }) => {
+export const Layout = () => {
   const { theme } = use(ThemeContext)
 
   return (
@@ -16,7 +18,8 @@ export const Layout = ({ children }) => {
       <ProgressBar/>
       <Header/>
       <Container size={'xl'}>
-        {children}
+        <Outlet/>
+        <CartContainer/>
       </Container>
       <Footer/>
     </div>
