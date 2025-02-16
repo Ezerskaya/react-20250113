@@ -19,8 +19,8 @@ export const Layout = () => {
       <Header/>
       <Container size={'xl'}>
         <Outlet/>
-        <CartContainer/>
       </Container>
+      <CartContainer/>
       <Footer/>
     </div>
   )
