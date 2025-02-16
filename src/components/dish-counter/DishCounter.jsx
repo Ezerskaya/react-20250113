@@ -1,10 +1,10 @@
 import { Counter } from '../counter/Counter.jsx'
 import { useCounter } from '../counter/use-count.js'
 
-export const DishCounter = () => {
-  const { count, onIncrement, onDecrement } = useCounter()
+export const DishCounter = ({ dishId }) => {
+  const { amount, onIncrement, onDecrement } = useCounter(dishId)
 
   return (
-    <Counter count={count} onDecrement={onDecrement} onIncrement={onIncrement}/>
+    <Counter count={amount} onDecrement={onDecrement} onIncrement={onIncrement}/>
   )
 }

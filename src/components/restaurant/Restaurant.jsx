@@ -1,11 +1,12 @@
 import { use } from 'react'
 import { AuthContext } from '../auth-context/index.js'
-import { RestaurantMenu } from '../restaurant-menu/RestaurantMenu.jsx'
 import { ReviewForm } from '../review-form/ReviewForm.jsx'
-import { RestaurantReviews } from '../restaurant-reviews/RestaurantReviews.jsx'
 import styles from './restaurant.module.css'
+import { Outlet } from 'react-router'
+import { Tabs } from '../tabs/Tabs.jsx'
+import { TabLink } from '../tab-link/TabLink.jsx'
 
-export const Restaurant = ({ name, menu, reviewsId }) => {
+export const Restaurant = ({ name }) => {
   const { auth } = use(AuthContext)
 
   if (!name) {
@@ -14,21 +15,14 @@ export const Restaurant = ({ name, menu, reviewsId }) => {
 
   return (
     <div className={styles.card}>
-      <h2 className={styles.title}><u>{name}</u></h2>
-      {menu.length ?
-        (
-          <RestaurantMenu menu={menu}/>
-        ) : (
-          <p>Menu in progress!</p>
-        )
-      }
-      {reviewsId.length ?
-        (
-          <RestaurantReviews reviewsId={reviewsId}/>
-        ) : (
-          <p>Not yet</p>
-        )
-      }
+      <h2 className={styles.title}>
+        <u>{name}</u>
+      </h2>
+      <Tabs>
+        <TabLink to="menu" viewVariant='middleSizeTab'>Menu</TabLink>
+        <TabLink to="reviews" viewVariant='middleSizeTab'>Reviews</TabLink>
+      </Tabs>
+      <Outlet/>
       {auth && <ReviewForm/>}
     </div>
   )

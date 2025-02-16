@@ -1,6 +1,8 @@
-.wrapper {
-    margin-bottom: var(--margin-bottom-section);
-    padding: 1rem 0;
+.cart {
+    text-align: center;
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .title {
