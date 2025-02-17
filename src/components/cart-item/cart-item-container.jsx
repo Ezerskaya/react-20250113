@@ -7,10 +7,6 @@ export const CartItemContainer = ({ id }) => {
   const amount = useSelector((state) => selectAmountByItemId(state, id))
   const dish = useSelector((state) => selectDishById(state, id))
 
-  console.log(dish, 'dish')
-  console.log(amount, 'amount')
-
-
   if (!dish) {
     return null
   }
