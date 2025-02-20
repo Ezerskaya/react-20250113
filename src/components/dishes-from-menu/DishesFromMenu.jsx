@@ -2,9 +2,9 @@ import { use } from 'react'
 import styles from './DishesFromMenu.module.css'
 import { ThemeContext } from '../theme-context'
 
-export const DishesFromMenu = ({ name, price, ingredients, id }) => {
+export const DishesFromMenu = ({ name, price }) => {
   const { theme } = use(ThemeContext)
-  const listIngredients = ingredients.join(', ')
+  // const listIngredients = ingredients.join(', ')
 
   return (
     <div className={styles.wrapper}>
@@ -13,7 +13,7 @@ export const DishesFromMenu = ({ name, price, ingredients, id }) => {
            alt="dish default"
       />
       <p className={styles.nameDish}>{name} <span>{price}$</span></p>
-      <i>[{listIngredients}]</i>
+      {/*<i>[{listIngredients}]</i>*/}
     </div>
   )
 }

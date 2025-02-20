@@ -6,7 +6,7 @@ import { Outlet } from 'react-router'
 import { Tabs } from '../tabs/Tabs.jsx'
 import { TabLink } from '../tab-link/TabLink.jsx'
 
-export const Restaurant = ({ name }) => {
+export const Restaurant = ({ name, cover, description }) => {
   const { auth } = use(AuthContext)
 
   if (!name) {
@@ -18,6 +18,8 @@ export const Restaurant = ({ name }) => {
       <h2 className={styles.title}>
         <u>{name}</u>
       </h2>
+      [{description}]
+      <img src={cover} alt=""/>
       <Tabs>
         <TabLink to="menu" viewVariant='middleSizeTab'>Menu</TabLink>
         <TabLink to="reviews" viewVariant='middleSizeTab'>Reviews</TabLink>

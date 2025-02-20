@@ -4,9 +4,11 @@ import { Restaurant } from './Restaurant.jsx'
 
 export const RestaurantContainer = ({ id }) => {
   const restaurant = useSelector((state) => selectRestaurantById(state, id))
-  const { name, reviews, menu } = restaurant || {}
+  const { name, reviews, menu, img, description } = restaurant || {}
 
-  return (
-    <Restaurant name={name} reviewsId={reviews} menu={menu} id={id}/>
-  )
+  return (<Restaurant name={name}
+                      reviewsId={reviews}
+                      menu={menu} id={id} cover={img}
+                      description={description}
+    />)
 }

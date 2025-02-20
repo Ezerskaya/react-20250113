@@ -1,23 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { normalizedReviews } from '../../../../data/normalized-mock.js'
+import { createEntityAdapter, createSlice } from '@reduxjs/toolkit'
+import { getReviews } from './get-reviews.js'
 
-const initialState = {
-  ids: normalizedReviews.map(({ id }) => id),
-  entities: normalizedReviews.reduce((acc, item) => {
-    acc[item.id] = item;
-
-    return acc;
-
-  }, {}),
-};
+const entityAdapter = createEntityAdapter()
 
 export const reviewsSlice = createSlice({
-  name: "reviews",
-  initialState,
+  name: 'reviews',
+  initialState: entityAdapter.getInitialState(),
   selectors: {
     selectReviewById: (state, id) => state.entities[id],
-  }
+  },
+  extraReducers: (builder) =>
+    builder.addCase(getReviews.fulfilled, (state, { payload }) => {
+      entityAdapter.setMany(state, payload)
+    })
+})
 
-});
+const selectReviewsSlice = (state) => state.reviews
 
-export const { selectReviewById } = reviewsSlice.selectors;
+export const {
+  selectById: selectReviewById,
+} =
+  entityAdapter.getSelectors(selectReviewsSlice)

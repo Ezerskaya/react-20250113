@@ -3,13 +3,13 @@ import { selectRestaurantIds } from './slice'
 
 export const getRestaurants = createAsyncThunk(
   'restaurants/getRestaurants',
-  async (_, {rejectWithValue}) => {
+  async (_, { rejectWithValue }) => {
     const response = await fetch('http://localhost:3001/api/restaurants/')
 
     const result = await response.json()
 
     if (!result.length) {
-      rejectWithValue('no restaurant found')
+      rejectWithValue('no restaurants found')
       return
     }
 
@@ -17,7 +17,8 @@ export const getRestaurants = createAsyncThunk(
   },
   {
     condition: (_, { getState }) => {
-      return !selectRestaurantIds(getState()).length;
+      const restaurantIds = selectRestaurantIds(getState());
+      return !restaurantIds.length
     },
   }
 )
