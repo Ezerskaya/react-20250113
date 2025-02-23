@@ -5,9 +5,7 @@ import { getRestaurantById } from '../restaurantById/get-restaurant-by-id.js'
 const entityAdapter = createEntityAdapter()
 export const restaurantSlice = createSlice({
   name: 'restaurants',
-  initialState: entityAdapter.getInitialState({
-    getRestaurantsRequestStatus: 'idle',
-  }),
+  initialState: entityAdapter.getInitialState(),
 
   selectors: {
     selectRestaurantIds: (state) => state.ids,

@@ -4,7 +4,6 @@ import { ThemeContext } from '../theme-context'
 
 export const DishesFromMenu = ({ name, price }) => {
   const { theme } = use(ThemeContext)
-  // const listIngredients = ingredients.join(', ')
 
   return (
     <div className={styles.wrapper}>
@@ -13,7 +12,6 @@ export const DishesFromMenu = ({ name, price }) => {
            alt="dish default"
       />
       <p className={styles.nameDish}>{name} <span>{price}$</span></p>
-      {/*<i>[{listIngredients}]</i>*/}
     </div>
   )
 }
