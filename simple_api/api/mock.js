@@ -196,6 +196,10 @@ const normalizedUsers = [
     id: "dfb982e9-b432-4b7d-aec6-7f6ff2e6af54",
     name: "Sam",
   },
+  {
+    id: "381b0c31-6360-43ff-80d1-581a116159d8",
+    name: "Andrew",
+  },
 ];
 
 module.exports = {

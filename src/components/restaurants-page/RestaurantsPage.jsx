@@ -1,35 +1,27 @@
-import { useSelector } from 'react-redux'
-import { selectRestaurantIds } from '../../redux/entities/restaurants/slice.js'
-import { RestaurantsTabContainer } from '../restaurants-tab/RestaurantsTabContainer.jsx'
 import { Outlet } from 'react-router'
 import { Tabs } from '../tabs/Tabs.jsx'
-import { getRestaurants } from '../../redux/entities/restaurants/get-restaurants.js'
-import { useRequest } from '../../redux/entities/hook/use-request.js'
-import {
-  REQUEST_STATUS_PENDING,
-  REQUEST_STATUS_REJECTED
-} from '../../redux/entities/constants.js'
+import { useGetRestaurantsQuery } from '../../redux/services/api/api.js'
+import { TabLink } from '../tab-link/TabLink.jsx'
 
 export const RestaurantsPage = () => {
-  const requestStatus = useRequest(getRestaurants)
-  const restaurantsIds = useSelector(selectRestaurantIds)
+  const { data, isLoading, isError } = useGetRestaurantsQuery()
 
-  if (requestStatus === REQUEST_STATUS_PENDING) {
+  if (isLoading) {
     return 'loading...'
   }
 
-  if (requestStatus === REQUEST_STATUS_REJECTED) {
+  if (isError) {
     return 'error'
   }
 
-  if (!restaurantsIds.length) {
+  if (!data?.length) {
     return null
   }
 
   return (
     <Tabs>
-      {restaurantsIds.map((id) => (
-        <RestaurantsTabContainer key={id} id={id}/>
+      {data.map(({ id, name }) => (
+        <TabLink key={id} to={`/restaurants/${id}`}>{name}</TabLink>
       ))}
       <Outlet/>
     </Tabs>
