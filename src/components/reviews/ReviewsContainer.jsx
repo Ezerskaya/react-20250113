@@ -4,12 +4,11 @@ import { useGetRestaurantReviewQuery } from '../../redux/services/api/api.js'
 export const ReviewsContainer = ({ restaurantId }) => {
   const {
     data: reviewsData,
-    isLoading: reviewsIsLoading,
     isFetching: reviewsIsFetching,
     isError: reviewsIsError
   } = useGetRestaurantReviewQuery(restaurantId)
 
-  if (reviewsIsLoading || reviewsIsFetching) {
+  if (reviewsIsFetching) {
     return 'loading...'
   }
 
