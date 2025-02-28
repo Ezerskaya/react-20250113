@@ -5,6 +5,16 @@
     margin-bottom: var(--margin-bottom-section);
 
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
 .title {
     margin-bottom: var(--margin-bottom-title);
     font-size: var(--font-size-title-middle);

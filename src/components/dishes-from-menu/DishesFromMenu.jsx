@@ -2,7 +2,7 @@ import { use } from 'react'
 import styles from './DishesFromMenu.module.css'
 import { ThemeContext } from '../theme-context'
 
-export const DishesFromMenu = ({ name, price }) => {
+export const DishesFromMenu = ({ price, name }) => {
   const { theme } = use(ThemeContext)
 
   return (
